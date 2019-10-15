@@ -12,17 +12,6 @@ def archimedes(numSides):
     innerAngelB = 360.0 / numSides
 
 
-
-
-
-
-
-
-
-
-
-
-
 print(archimedes(4))
 print(archimedes(8))
 print(archimedes(16))
@@ -33,5 +22,13 @@ for sides in range(8, 10, 8):
 
 # see the loop above. in addition to the value of pi, print he difference
 # between the values calculated by the archimedes function and by math.pi.
+
+# Accumulators
+
+acc = 0
+for val in range(1, 6, 1):
+    acc = acc + val
+
+print(acc)
 
 
