@@ -50,18 +50,15 @@ import random
 
 print(random.random())
 
+# boolean expressions
+# <, <=, >, >=, ==, !=
+# compound Boolean expressions
+# and, or, not
 
-
-
-
-
-
-
-
-
-
-
-
+dogWeight = 25
+print(dogWeight >= 25)
+catWeight = 12
+print(dogWeight >= 25 and catWeight <= 12)
 
 
 
