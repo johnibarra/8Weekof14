@@ -91,9 +91,10 @@ else:
         else:
             print("not bigger than much")
 
-def MontePi(numDart):
+def montePi(numDart):
 
     inCircle = 0
+
 
     for i in range(numDart):
         x = random.random()
@@ -106,7 +107,50 @@ def MontePi(numDart):
             pi = inCircle / numDart * 4
             return pi
 
-print(MontePi(10000))
+print(montePi(10000))
+
+import turtle
+
+def showMontPi(numDart):
+    scn = turtle.screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2, -2, 2, 2)
+
+    t.penup()
+    t.goto(-1, 0)
+    t.pendown()
+    t.goto(1, 0)
+
+    t.penup()
+    t.goto(0, -1)
+    t.pendown()
+    t.goto(0, -1)
+
+    inCircle = 0
+    t.penup()
+
+    for i in range(numDart):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+        t.goto(x, y)
+
+        if distance <= 1:
+            inCircle = inCircle + 1
+            t.color("blue")
+        else:
+            t.color("red")
+
+            t.dot()
+
+            pi = inCircle / numDart * 4
+            scn.exitonclick()
+            return pi
+
+
+
 
 
 
