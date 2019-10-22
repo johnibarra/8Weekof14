@@ -91,6 +91,23 @@ else:
         else:
             print("not bigger than much")
 
+def MontePi(numDart):
+
+    inCircle = 0
+
+    for i in range(numDart):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+        if distance <= 1:
+            inCircle = inCircle + 1
+
+            pi = inCircle / numDart * 4
+            return pi
+
+print(MontePi(10000))
+
 
 
 
